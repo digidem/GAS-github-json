@@ -1,4 +1,3 @@
-
 // This function is run every time the spreadsheet is updated.
 // It will save a property on `ScriptProperties` with an array of every sheet
 // which has been edited since the last sync with Github
@@ -43,10 +42,10 @@ function updateGithub() {
   JSON.parse(sheets).names.forEach(function(name) {  
     
     // Create a Github object
-    var github = new Github({token: 'ef631c5b0b4ac2e1e30d860a0fcd5b2708678a88'});
+    var github = new Github({token: 'GITHUB PERSONAL TOKEN FROM https://github.com/settings/applications'});
     
     // Access the clearwater map repo
-    var repo = github.getRepo('digidem', 'clearwater-map');
+    var repo = github.getRepo('GITHUB USERNAME', 'REPO NAME');
     
     // Get the sheet id and name
     var sheet = spreadsheet.getSheetByName(name);
